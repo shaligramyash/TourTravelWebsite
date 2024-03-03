@@ -1,0 +1,284 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Contact Form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="{% static 'css/style.css'%}">
+
+</head>
+
+<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Book Your Ticket!</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12">
+					<div class="wrapper">
+
+						<div class="row">
+							<div class="col-md-3">
+								<div id="qrcode" class="mt-5 text-center">
+
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="row no-gutters">
+									<div class="col-lg-12 col-md-12 order-md-last d-flex align-items-stretch">
+										<div class="contact-wrap w-100 p-md-5 p-4">
+											<h3 class="mb-4">Fill your information</h3>
+											<div id="form-message-warning" class="mb-4"></div>
+											<div id="form-message-success" class="mb-4">
+												Your information is stored, thank you!
+											</div>
+											<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+												<div class="row">
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="label" for="name">Name</label>
+															<input type="text" class="form-control" name="Name"
+																id="name" placeholder="Name">
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="label" for="email">Email</label>
+															<input type="email" class="form-control" name="Email"
+																id="email" placeholder="Email">
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+															<label class="label" for="subject">No of tickets</label>
+															<input type="text" class="form-control" name="subject"
+																id="subject" placeholder="Subject">
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+															<label class="label" for="#">Date</label>
+															<input type="date" value="1980-08-26" textarea name="message" class="form-control" id="message"
+																cols="30" rows="4" placeholder="Message"></textarea>
+														</div>
+													</div>
+													<div class="col-md-12">
+														<div class="form-group">
+															<div class="container">
+																<div class="row">
+																	<div class="col-12 mt-4">
+																		<div class="card p-3">
+																			<p class="mb-0 fw-bold h4">Payment Methods</p>
+																		</div>
+																	</div>
+																	<div class="col-12">
+																		<div class="card p-3">
+																			<div class="card-body border p-0">
+																				<div class="collapse p-3 pt-0" id="collapseExample">
+																					<div class="row">
+																						<div class="col-8">
+																							<p class="h4 mb-0">Summary</p>
+																							<p class="mb-0"><span class="fw-bold">Product:</span><span class="c-green">: Name of
+																									product</span></p>
+																							<p class="mb-0"><span class="fw-bold">Price:</span><span
+																									class="c-green">:$452.90</span></p>
+																							<!-- <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque
+																								nihil neque
+																								quisquam aut
+																								repellendus, dicta vero? Animi dicta cupiditate, facilis provident quibusdam ab
+																								quis,
+																								iste harum ipsum hic, nemo qui!</p> -->
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																			<div class="card-body border p-0">
+																				<p>
+																					<a class="btn btn-primary w-100 h-100 d-flex align-items-center justify-content-between"
+																						data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true"
+																						aria-controls="collapseExample">
+																						<span class="fw-bold">Paytm</span>
+																						<span class="fab fa-cc-paypal">
+																						</span>
+																					</a>
+																				</p>
+																				<!-- <div class="collapse p-3 pt-0" id="collapseExample">
+																					<div class="row">
+																						<div class="col-8">
+																							<p class="h4 mb-0">Summary</p>
+																							<p class="mb-0"><span class="fw-bold">Product:</span><span class="c-green">: Name of
+																									product</span></p>
+																							<p class="mb-0"><span class="fw-bold">Price:</span><span
+																									class="c-green">:$452.90</span></p>
+																							<p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque
+																								nihil neque
+																								quisquam aut
+																								repellendus, dicta vero? Animi dicta cupiditate, facilis provident quibusdam ab
+																								quis,
+																								iste harum ipsum hic, nemo qui!</p>
+																						</div>
+																					</div>
+																				</div> -->
+																				<p>
+																					<a class="btn btn-primary p-2 w-100 h-100 d-flex align-items-center justify-content-between"
+																						data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true"
+																						aria-controls="collapseExample">
+																						<span class="fw-bold">Credit Card</span>
+																						<span class="">
+																							<span class="fab fa-cc-amex"></span>
+																							<span class="fab fa-cc-mastercard"></span>
+																							<span class="fab fa-cc-discover"></span>
+																						</span>
+																					</a>
+																				</p>
+																				<div class="collapse show p-3 pt-0" id="collapseExample">
+																					<div class="row">
+																						<div class="col-lg-5 mb-lg-0 mb-3">
+																							<p class="h4 mb-0">Summary</p>
+																							<p class="mb-0"><span class="fw-bold">Product:</span><span class="c-green">: Name of
+																									product</span>
+																							</p>
+																							<p class="mb-0">
+																								<span class="fw-bold">Price:</span>
+																								<span class="c-green">:</span>
+																							</p>
+																							<!-- <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque
+																								nihil neque
+																								quisquam aut
+																								repellendus, dicta vero? Animi dicta cupiditate, facilis provident quibusdam ab
+																								quis,
+																								iste harum ipsum hic, nemo qui!</p> -->
+																						</div>
+																						<div class="col-lg-7">
+																							<form action="" class="form">
+																								<div class="row">
+																									<div class="col-12">
+																										<div class="form__div">
+																											<input type="text" class="form-control" placeholder=" ">
+																											<label for="" class="form__label">Card Number</label>
+																										</div>
+																									</div>
+														
+																									<div class="col-6">
+																										<div class="form__div">
+																											<input type="text" class="form-control" placeholder=" ">
+																											<label for="" class="form__label">MM / yy</label>
+																										</div>
+																									</div>
+														
+																									<div class="col-6">
+																										<div class="form__div">
+																											<input type="password" class="form-control" placeholder=" ">
+																											<label for="" class="form__label">cvv code</label>
+																										</div>
+																									</div>
+																									<div class="col-12">
+																										<div class="form__div">
+																											<input type="text" class="form-control" placeholder=" ">
+																											<label for="" class="form__label">name on the card</label>
+																										</div>
+																									</div>
+																									<div class="col-12">
+																										<input type="submit" value="Make Payment" 
+																										class="btn btn-primary" onclick="generateqr()">
+																									      <div class="submitting"></div>
+																									</div>
+																								</div>
+																							</form>
+																						</div>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<!-- <div class="col-12">
+																		<div class="btn btn-primary payment">
+																			Make Payment
+																		</div>
+																	</div> -->
+																</div>
+															</div>
+															<!-- <input type="submit" value="Make Payment" 
+																class="btn btn-primary" onclick="generateqr()">
+															<div class="submitting"></div> -->
+															<!-- <input type="submit" value="Submit" name="submit">  -->
+														</div>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<div class="text pl-3">
+									<p><span></span> <a href="#"></a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		</div>
+
+		</div>
+		</div>
+		</div>
+	</section>
+
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'js/popper.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/jquery.validate.min.js' %}"></script>
+	<script src="{% static 'js/mainqr.js' %}"></script>
+
+
+
+	<script>
+
+		function generateqr() {
+			var name = document.getElementById('name').value;
+			var email = document.getElementById('email').value;
+			var subject = document.getElementById('subject').value;
+			var message = document.getElementById('message').value;
+
+			console.log('Name: ' + name + " " + email + " " + subject + " " + message);
+
+			var url = "https://chart.googleapis.com/chart?cht=qr&chs=200x200&chl=Name:" +
+			name + "%0a Email: " + email + " Subject: " + subject + " Message: " + message;
+
+			var ifr = `<iframe src="${url}" height="200" width="200"></iframe>`;
+
+			document.getElementById('qrcode').innerHTML = ifr;
+		}
+
+	</script>
+	<script>
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbxHvm5B11j851Cx5Fumvf8exO2mhZDnImpUSBANwGOc7KIN-eWBJuJ7N9K5QMTApMRSpg/exec'
+		const form = document.forms['contactForm']
+	  
+		form.addEventListener('submit', e => {
+		  e.preventDefault()
+		  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+			.then(response => alert("YOUR TICKET IS BOOKED...! PLEASE TAKE THE SCREENSHOT..."))
+			.catch(error => console.error('Error!', error.message))
+		})
+	  </script>
+
+
+
+</body>
+
+</html>
